@@ -160,7 +160,7 @@ const logMapClick = async (object, event) => {
 
 		roadLineFeature.value = roadLine;
 	} catch (err) {
-		console.error('Подробная ошибка OpenRouteService:', err);
+		console.error('Ошибка OpenRouteService:', err);
 		alert(`Ошибка при построении маршрута по дороге: ${err.message}`);
 	}
 
