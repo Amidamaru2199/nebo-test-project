@@ -1,15 +1,18 @@
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), VitePWA({
+  plugins: [
+    vue(), 
+    VitePWA({
     registerType: 'autoUpdate',
     injectRegister: false,
 
     pwaAssets: {
-      disabled: false,
+      disabled: true,
       config: true,
     },
 
@@ -32,5 +35,7 @@ export default defineConfig({
       suppressWarnings: true,
       type: 'module',
     },
-  })],
+  }),
+  tailwindcss(),
+],
 })
